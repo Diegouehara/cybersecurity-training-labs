@@ -1,49 +1,49 @@
-# 🎯 Metasploitable 2 — Security Assessment
+# 🎯 Metasploitable 2 — Avaliação de Segurança
 
-## Overview
+## 📋 Visão Geral
 
-This directory contains practical security investigations conducted against **Metasploitable 2**, an intentionally vulnerable Linux virtual machine designed for cybersecurity training and penetration testing practice.
+Este diretório reúne investigações práticas de segurança realizadas contra o **Metasploitable 2**, uma máquina virtual Linux intencionalmente vulnerável, desenvolvida para treinamento em cybersecurity e prática de *Penetration Testing*.
 
-The objective is to investigate exposed services, understand security vulnerabilities, validate findings in a controlled environment, and document their technical impact and mitigation strategies.
+O objetivo é investigar serviços expostos, compreender vulnerabilidades de segurança, validar descobertas em um ambiente controlado e documentar seus impactos técnicos e estratégias de mitigação.
 
-All activities are performed within an isolated virtual network.
+Todas as atividades são realizadas em uma rede virtual isolada.
 
-## 🖥️ Laboratory Environment
+## 🖥️ Ambiente de Laboratório
 
-| Component | Configuration |
+| Componente | Configuração |
 |---|---|
-| Target | Metasploitable 2 |
-| Operating System | Ubuntu Linux 8.04 |
-| Virtualization | Virtual Machine |
-| Network | Isolated laboratory network |
-| Attacker Machine | Kali Linux |
+| Sistema alvo (*Target*) | Metasploitable 2 |
+| Sistema operacional | Ubuntu Linux 8.04 |
+| Virtualização | Máquina virtual (*Virtual Machine*) |
+| Rede | Rede isolada de laboratório |
+| Máquina de testes | Kali Linux |
 
-## 🔬 Vulnerability Investigations
+## 🔬 Investigações de Vulnerabilidades
 
-Each investigation is maintained independently, with its own technical report, evidence, and references.
+Cada investigação é documentada de forma independente, com seu próprio relatório técnico, evidências e referências.
 
-| Investigation | Vulnerability | Status |
+| Investigação | Vulnerabilidade | Status |
 |---|---|---|
-| [vsFTPd 2.3.4 Backdoor](vsftpd-234-backdoor/README.md) | CVE-2011-2523 · TCP/21 | Completed |
+| [Backdoor do vsFTPd 2.3.4](vsftpd-234-backdoor/README.md) | CVE-2011-2523 · TCP/21 | Concluído |
 
-Additional investigations will be documented as they are performed and validated.
+Novas investigações serão documentadas conforme forem realizadas e validadas.
 
-## 📑 Documentation Structure
+## 📑 Estrutura da Documentação
 
-Each laboratory directory may contain:
+Cada diretório de laboratório pode conter:
 
-- **README.md:** technical report, methodology, findings, impact, and mitigation.
-- **evidence/:** screenshots and supporting technical evidence.
-- **references/:** official documentation and research sources.
+- **README.md:** relatório técnico, metodologia, descobertas, impacto e medidas de mitigação.
+- **evidence/:** capturas de tela e evidências técnicas de apoio.
+- **references/:** documentação oficial e fontes utilizadas na pesquisa.
 
-## ⚠️ Scope and Authorization
+## ⚠️ Escopo e Autorização
 
-All tests are conducted against the intentionally vulnerable Metasploitable 2 virtual machine in an isolated environment under my control.
+Todos os testes são realizados contra a máquina virtual Metasploitable 2, intencionalmente vulnerável, em um ambiente isolado sob meu controle.
 
-The techniques documented here are intended exclusively for educational purposes and authorized security testing.
+As técnicas documentadas destinam-se exclusivamente a fins educacionais e a atividades de testes de segurança devidamente autorizadas.
 
 ---
 
 <p align="center">
-  <sub>Metasploitable 2 · Cybersecurity Training Environment</sub>
+  <sub>Metasploitable 2 · Ambiente de Treinamento em Cybersecurity</sub>
 </p>
