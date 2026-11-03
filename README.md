@@ -1,13 +1,13 @@
 # 🛡️ Cybersecurity Training Labs
 
 <p align="center">
-  <img src="https://img.shields.io/badge/Focus-Cybersecurity-red?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Approach-Hands--On%20Learning-blue?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Status-Active%20Learning-success?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Foco-Cybersecurity-red?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Abordagem-Aprendizado%20Prático-blue?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Aprendizado%20Contínuo-success?style=for-the-badge" />
 </p>
 
 <p align="center">
-  <strong>Practical cybersecurity labs focused on vulnerability analysis, penetration testing, security assessment, and technical documentation.</strong>
+  <strong>Laboratórios práticos de Cybersecurity com foco em investigação de vulnerabilidades, segurança de redes, penetration testing e documentação técnica.</strong>
 </p>
 
 <p align="center">
@@ -16,165 +16,201 @@
 
 ---
 
-## 👨‍💻 About This Project
+## 📁 Sobre o Projeto
 
-**Cybersecurity Training Labs** is a personal hands-on cybersecurity project created to develop practical skills through controlled security experiments, vulnerability investigations, and technical analysis.
+O **Cybersecurity Training Labs** é um repositório dedicado à documentação de estudos, experimentos e investigações práticas na área de Cybersecurity.
 
-The repository documents practical exercises involving intentionally vulnerable systems, security tools, network services, and exploitation techniques.
+O projeto utiliza ambientes de laboratório controlados, incluindo sistemas intencionalmente vulneráveis, para investigar serviços de rede, analisar falhas de segurança, compreender técnicas de exploração e estudar mecanismos de proteção.
 
-Each lab follows a structured approach:
+O objetivo não é apenas executar ferramentas, mas compreender os procedimentos realizados, interpretar seus resultados e documentar as descobertas de maneira técnica e reproduzível.
 
-- Understanding the target environment and its services.
-- Identifying potential security weaknesses.
-- Investigating and validating vulnerabilities.
-- Performing controlled security tests.
-- Analyzing technical evidence and security impact.
-- Documenting findings and mitigation recommendations.
+Cada investigação reúne procedimentos, comandos, evidências, análises, resultados e referências técnicas.
 
-This repository also serves as my **technical portfolio**, documenting my learning progress, practical experience, and development toward a career in cybersecurity.
+Este repositório também funciona como um **portfólio técnico**, registrando o desenvolvimento dos estudos e as experiências práticas realizadas ao longo do aprendizado.
 
-## 🎯 Learning Objectives
+## 🎯 Áreas de Estudo
 
-The main goal is to progressively develop practical competencies in the following areas:
+O projeto contempla diferentes áreas da segurança da informação, com foco no desenvolvimento progressivo de conhecimentos técnicos.
 
-| Area | Skills |
+| Área | Objetivo |
 |---|---|
-| 🔎 Reconnaissance | Host discovery, information gathering, and network mapping. |
-| 🌐 Network Security | Network protocols, ports, services, and traffic analysis. |
-| 🧭 Service Enumeration | Service identification, version detection, and configuration analysis. |
-| 🔐 Authentication Security | Authentication mechanisms and controlled credential auditing. |
-| 🕸️ Web Application Security | Web technologies, application testing, and vulnerability identification. |
-| 💥 Vulnerability Assessment | Vulnerability research, validation, and impact analysis. |
-| ⚔️ Penetration Testing | Controlled exploitation and security testing methodologies. |
-| 🛡️ Security Remediation | Risk analysis and mitigation recommendations. |
+| 🔎 Reconnaissance | Descoberta de hosts, coleta de informações e mapeamento de redes. |
+| 🌐 Network Security | Estudo de protocolos, portas, serviços e tráfego de rede. |
+| 🧭 Service Enumeration | Identificação de serviços, detecção de versões e análise de configurações. |
+| 🔐 Authentication Security | Investigação de mecanismos de autenticação e auditoria controlada de credenciais. |
+| 🕸️ Web Application Security | Estudo de aplicações web e identificação de vulnerabilidades. |
+| 💥 Vulnerability Assessment | Pesquisa, validação e análise do impacto de vulnerabilidades. |
+| ⚔️ Penetration Testing | Execução de testes de segurança e exploração controlada. |
+| 🛡️ Defensive Security | Análise de riscos, identificação de exposições e estratégias de mitigação. |
 
-## 🧪 Completed Labs
+O escopo inclui conhecimentos de segurança ofensiva e defensiva, buscando compreender tanto as técnicas de exploração quanto os métodos de identificação e correção de vulnerabilidades.
 
-### Metasploitable 2 — vsFTPd 2.3.4 Backdoor
+## 🧪 Laboratórios Concluídos
 
-<sub>Vulnerability Investigation · CVE-2011-2523 · TCP/21</sub>
+As investigações abaixo foram realizadas no ambiente virtualizado **Metasploitable 2**, uma máquina Linux intencionalmente vulnerável utilizada para treinamento em segurança da informação.
 
-<kbd>Completed</kbd>
+### 1. 🔐 FTP Authentication Security
 
-**Objective:** Investigate and validate the backdoor vulnerability associated with a compromised distribution of vsFTPd 2.3.4.
+<sub>Authentication Security · Credential Auditing · FTP · TCP/21</sub>
 
-**Activities performed:**
+**Objetivo:** avaliar os mecanismos de autenticação FTP, identificar fragilidades relacionadas a credenciais e analisar a exposição de informações durante a comunicação.
 
-- 🔎 Identified and enumerated the FTP service using Nmap.
-- 🧭 Analyzed the service banner and FTP behavior.
-- 📚 Investigated the technical background of CVE-2011-2523.
-- 🔬 Examined the Nmap NSE detection script.
-- ⚔️ Validated the vulnerability using Nmap NSE.
-- 🛠️ Performed controlled exploitation using the Metasploit Framework.
-- 🔐 Confirmed remote command execution with `root` privileges.
-- 📑 Documented technical evidence, security impact, and mitigation recommendations.
+**Atividades realizadas:**
 
-**Verified result:** Successful exploitation in the isolated laboratory environment, resulting in a remote session with `root` privileges on the target system.
+- 🔎 Reconhecimento e enumeração do serviço FTP utilizando Nmap.
+- 🔐 Análise da autenticação anônima e de usuários locais.
+- 🔬 Investigação do comportamento do servidor após falhas consecutivas de login.
+- ⚔️ Auditoria de credenciais utilizando Hydra e Medusa.
+- ✅ Validação manual das credenciais identificadas.
+- 📡 Captura e análise do tráfego FTP utilizando Wireshark.
+- 🔍 Identificação de credenciais e comandos transmitidos em texto claro.
+- 📂 Análise da navegação e do acesso aos diretórios do sistema de arquivos.
 
-**Tools:** `Kali Linux` · `Nmap` · `Metasploit Framework` · `Metasploitable 2`
+**Resultado verificado:** identificação e validação de credenciais padrão de uma conta local, confirmação da exposição de informações de autenticação sem criptografia e acesso a diretórios do sistema de arquivos por meio do serviço FTP.
 
-**Technical documentation and evidence:**
+**Ferramentas:** `Nmap` · `Hydra` · `Medusa` · `Wireshark` · `Cliente FTP` · `Kali Linux`
 
-[View the complete lab report](metasploitable-2/vsftpd-234-backdoor/README.md)
+**Documentação técnica:**
+
+[📄 Visualizar FTP Authentication Security](metasploitable-2/ftp/authentication-security/README.md)
 
 ---
 
-## 🧰 Tools & Technologies
+### 2. 🛡️ vsFTPd 2.3.4 Backdoor
 
-Tools used or studied throughout the learning process:
+<sub>Vulnerability Investigation · CVE-2011-2523 · TCP/21 · TCP/6200</sub>
 
-| Tool | Application |
+**Objetivo:** investigar, validar e explorar a backdoor associada a uma distribuição comprometida do vsFTPd 2.3.4.
+
+**Atividades realizadas:**
+
+- 🔎 Identificação e enumeração do serviço FTP utilizando Nmap.
+- 📚 Investigação do contexto técnico da CVE-2011-2523.
+- 🔬 Análise do código-fonte do script NSE de detecção do Nmap.
+- ⚔️ Validação da vulnerabilidade utilizando Nmap NSE.
+- 🛠️ Exploração automatizada utilizando Metasploit Framework.
+- 🔧 Reprodução manual da exploração utilizando FTP e Netcat.
+- 🔐 Confirmação de execução remota de comandos com privilégios de `root`.
+- 📑 Documentação das evidências, impacto e recomendações de mitigação.
+
+**Resultado verificado:** a vulnerabilidade foi explorada por duas abordagens: utilização automatizada do Metasploit Framework e acionamento manual da backdoor com conexão direta ao Bind Shell disponibilizado na TCP/6200. Em ambas as abordagens, foi confirmado acesso remoto com privilégios de `root`.
+
+**Ferramentas:** `Nmap` · `Metasploit Framework` · `Netcat` · `Cliente FTP` · `Kali Linux`
+
+**Documentação técnica:**
+
+[📄 Visualizar vsFTPd 2.3.4 Backdoor](metasploitable-2/ftp/vsftpd-234-backdoor/README.md)
+
+---
+
+## 🧰 Ferramentas e Tecnologias
+
+Ferramentas utilizadas nos laboratórios e tecnologias que fazem parte do processo de aprendizado.
+
+### Ferramentas utilizadas nas investigações
+
+| Ferramenta | Aplicação |
 |---|---|
-| 🔎 Nmap | Host discovery, port scanning, service enumeration, and vulnerability detection. |
-| ⚔️ Metasploit Framework | Controlled exploitation and security validation. |
-| 🔐 Medusa | Authentication auditing in authorized laboratory environments. |
-| 📡 Wireshark | Network traffic capture and protocol analysis. |
-| 🌐 Burp Suite | HTTP traffic inspection and web application security testing. |
-| 🐧 Linux | System administration and security testing environments. |
-| 🐍 Python | Automation, scripting, and development of security utilities. |
-| 🖥️ Virtualization | Isolated laboratory environments using virtual machines. |
+| 🔎 Nmap | Descoberta de hosts, varredura de portas, enumeração de serviços e detecção de vulnerabilidades. |
+| ⚔️ Metasploit Framework | Validação e exploração controlada de vulnerabilidades. |
+| 🔐 Hydra | Auditoria de mecanismos de autenticação utilizando ataques de dicionário. |
+| 🔐 Medusa | Testes automatizados de autenticação em serviços de rede. |
+| 📡 Wireshark | Captura e análise de tráfego e protocolos de rede. |
+| 💻 Netcat | Estabelecimento de conexões TCP e interação com serviços de rede. |
+| 🐧 Linux | Utilização e administração de sistemas e ambientes de segurança. |
+| 🖥️ Virtualização | Criação e gerenciamento de ambientes isolados de laboratório. |
 
-Tools are included according to their relevance to current and future laboratory exercises. Their presence in this list does not necessarily mean they have been used in every completed lab.
+### Tecnologias em estudo
 
-## ⚙️ Security Testing Methodology
-
-Laboratory investigations follow a structured methodology inspired by common penetration testing and vulnerability assessment practices.
-
-| Phase | Activity |
+| Tecnologia | Aplicação |
 |---|---|
-| 01. Reconnaissance | Gather initial information about the target environment. |
-| 02. Scanning | Identify hosts, open ports, and available services. |
-| 03. Enumeration | Investigate identified services and exposed information. |
-| 04. Vulnerability Analysis | Research and validate potential security weaknesses. |
-| 05. Controlled Exploitation | Reproduce vulnerabilities in authorized environments. |
-| 06. Impact Assessment | Evaluate the technical consequences of successful exploitation. |
-| 07. Reporting | Document evidence, findings, and remediation recommendations. |
+| 🐍 Python | Automação, scripting e desenvolvimento de ferramentas auxiliares. |
+| 🌐 Burp Suite | Inspeção de tráfego HTTP e testes de segurança em aplicações web. |
 
-The methodology is adapted to the scope and objectives of each individual lab.
+A presença de uma ferramenta ou tecnologia nesta seção não significa que ela tenha sido utilizada em todos os laboratórios ou que represente domínio completo sobre ela.
 
-## 📑 Technical Documentation & Evidence
+## ⚙️ Metodologia de Testes
 
-Each completed investigation aims to provide clear, reproducible, and technically grounded documentation.
+As investigações seguem uma metodologia estruturada, inspirada em práticas de *Penetration Testing* e *Vulnerability Assessment*.
 
-Depending on the nature of the lab, reports may include:
+| Etapa | Atividade |
+|---|---|
+| 01. Reconnaissance | Coleta inicial de informações sobre o ambiente alvo. |
+| 02. Scanning | Identificação de hosts, portas abertas e serviços disponíveis. |
+| 03. Enumeration | Investigação dos serviços identificados e das informações expostas. |
+| 04. Vulnerability Analysis | Pesquisa e validação de possíveis falhas de segurança. |
+| 05. Controlled Exploitation | Reprodução de vulnerabilidades em ambientes autorizados. |
+| 06. Impact Assessment | Avaliação das consequências técnicas das falhas identificadas. |
+| 07. Reporting | Documentação das evidências, descobertas e recomendações de mitigação. |
 
-- **Overview:** purpose and scope of the investigation.
-- **Environment:** target systems, network configuration, and tools.
-- **Discovery:** identification and enumeration procedures.
-- **Technical Analysis:** explanation of the vulnerability or behavior investigated.
-- **Validation:** methods and results used to confirm findings.
-- **Evidence:** terminal output, screenshots, and relevant observations.
-- **Security Impact:** consequences and potential risks.
-- **Mitigation:** recommendations to reduce or eliminate the identified risk.
-- **References:** official documentation and technical sources.
+A metodologia é adaptada ao escopo e aos objetivos de cada investigação. Nem todas as etapas são necessariamente aplicáveis a todos os laboratórios.
 
-Evidence is organized alongside the corresponding laboratory documentation.
+## 📑 Documentação Técnica e Evidências
 
-## 📈 Learning Progress
+Cada investigação busca fornecer documentação clara, organizada e fundamentada tecnicamente.
 
-This repository represents an ongoing learning process toward a career in cybersecurity.
+Dependendo da natureza do laboratório, os relatórios podem incluir:
 
-The focus is on developing the ability to:
+- **Overview:** objetivo e escopo da investigação.
+- **Environment:** sistemas alvo, configuração de rede e ferramentas utilizadas.
+- **Discovery:** procedimentos de reconhecimento e enumeração.
+- **Technical Analysis:** explicação técnica do serviço ou vulnerabilidade investigada.
+- **Validation:** procedimentos e resultados utilizados para confirmar as descobertas.
+- **Evidence:** capturas de tela, comandos, outputs e observações relevantes.
+- **Security Impact:** consequências e riscos identificados.
+- **Mitigation:** recomendações para reduzir ou eliminar os riscos.
+- **References:** documentação oficial e fontes técnicas.
 
-- Independently investigate systems and network services.
-- Understand network protocols and operating system behavior.
-- Identify and analyze attack surfaces.
-- Use security tools with an understanding of their operation and limitations.
-- Validate findings instead of relying solely on automated tool output.
-- Interpret technical evidence and assess security impact.
-- Produce professional technical reports.
-- Understand defensive measures and remediation strategies.
+As evidências são armazenadas no diretório `evidence/` de cada investigação, enquanto as fontes técnicas são organizadas em `references/`.
 
-New laboratories and technical investigations will be added as knowledge and practical experience progress.
+## 📈 Desenvolvimento dos Estudos
 
-## 📚 Technical References
+O repositório é atualizado continuamente conforme novos conhecimentos são adquiridos e novas investigações são realizadas.
 
-The following resources support ongoing study and technical research:
+Os estudos atuais incluem:
+
+- Fundamentos de redes de computadores e protocolos de comunicação.
+- Linux e administração de sistemas.
+- Segurança de redes e serviços.
+- Análise de vulnerabilidades e técnicas de exploração.
+- Fundamentos de segurança ofensiva e defensiva.
+- Automação e scripting com Python.
+
+Novos ambientes, ferramentas e laboratórios serão incorporados conforme o avanço dos estudos e a realização de novas investigações práticas.
+
+## 📚 Referências Técnicas
+
+Recursos utilizados como apoio aos estudos e pesquisas:
 
 - [OWASP Foundation](https://owasp.org/)
 - [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
-- [Nmap Official Documentation](https://nmap.org/book/man.html)
+- [Documentação oficial do Nmap](https://nmap.org/book/man.html)
 - [MITRE ATT&CK](https://attack.mitre.org/)
 - [MITRE CWE](https://cwe.mitre.org/)
 - [CVE Program](https://www.cve.org/)
 - [FIRST CVSS](https://www.first.org/cvss/)
 
-Specific references used in individual investigations are documented in their respective laboratory directories.
+As referências específicas utilizadas em cada investigação são documentadas nos respectivos diretórios.
 
-## ⚠️ Legal & Ethical Disclaimer
+## ⚠️ Aviso Legal e Ético
 
-This repository is intended exclusively for educational purposes and professional development.
+Este repositório destina-se exclusivamente a fins educacionais e ao desenvolvimento de conhecimentos em segurança da informação.
 
-All practical activities are performed in isolated laboratory environments, on intentionally vulnerable systems, or on infrastructure for which explicit authorization has been obtained.
+Todas as atividades práticas são realizadas em ambientes de laboratório isolados, em sistemas intencionalmente vulneráveis ou em infraestruturas para as quais existe autorização explícita.
 
-The techniques and tools documented here must not be used against third-party systems, networks, or services without proper authorization.
+As técnicas e ferramentas documentadas não devem ser utilizadas contra sistemas, redes ou serviços de terceiros sem a devida autorização.
+
+## 🔗 Links
+
+- [GitHub — Repositório](https://github.com/Diegouehara/cybersecurity-training-labs)
+- [LinkedIn — Perfil profissional](https://www.linkedin.com/in/diego-uehara-010830272/)
 
 ---
 
 <p align="center">
-  <strong>🔎 Investigate. ⚔️ Understand. 🛡️ Secure.</strong>
+  <strong>🔎 Investigar. ⚔️ Compreender. 🛡️ Proteger.</strong>
 </p>
 
 <p align="center">
-  <sub>Personal Cybersecurity Training & Research Portfolio</sub>
+  <sub>Cybersecurity Training Labs · Portfólio de estudos e investigações práticas</sub>
 </p>
