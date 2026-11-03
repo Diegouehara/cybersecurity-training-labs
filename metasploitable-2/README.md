@@ -1,49 +1,54 @@
-# 🎯 Metasploitable 2 — Avaliação de Segurança
+## 🧪 Laboratórios Concluídos
 
-## 📋 Visão Geral
+### Metasploitable 2 — Ambiente de Treinamento
 
-Este diretório reúne investigações práticas de segurança realizadas contra o **Metasploitable 2**, uma máquina virtual Linux intencionalmente vulnerável, desenvolvida para treinamento em cybersecurity e prática de *Penetration Testing*.
+Investigações práticas realizadas contra uma máquina Linux intencionalmente vulnerável, com foco em serviços FTP, autenticação e exploração de vulnerabilidades.
 
-O objetivo é investigar serviços expostos, compreender vulnerabilidades de segurança, validar descobertas em um ambiente controlado e documentar seus impactos técnicos e estratégias de mitigação.
+#### 🔐 FTP Authentication Security
 
-Todas as atividades são realizadas em uma rede virtual isolada.
+<sub>Authentication Assessment · Hydra · Medusa · Wireshark · TCP/21</sub>
 
-## 🖥️ Ambiente de Laboratório
+**Objetivo:** avaliar os mecanismos de autenticação FTP, identificar fragilidades relacionadas a credenciais e analisar a exposição de informações durante a comunicação.
 
-| Componente | Configuração |
-|---|---|
-| Sistema alvo (*Target*) | Metasploitable 2 |
-| Sistema operacional | Ubuntu Linux 8.04 |
-| Virtualização | Máquina virtual (*Virtual Machine*) |
-| Rede | Rede isolada de laboratório |
-| Máquina de testes | Kali Linux |
+**Atividades realizadas:**
 
-## 🔬 Investigações de Vulnerabilidades
+- 🔎 Reconhecimento e enumeração do serviço FTP utilizando Nmap.
+- 🔐 Análise de autenticação anônima e usuários locais.
+- 🔬 Investigação do comportamento do servidor após falhas consecutivas de login.
+- ⚔️ Auditoria de credenciais utilizando Hydra e Medusa.
+- ✅ Validação manual das credenciais identificadas.
+- 📡 Captura e análise de tráfego FTP utilizando Wireshark.
+- 🔍 Identificação de credenciais transmitidas em texto claro.
+- 📂 Análise da navegação e das permissões do sistema de arquivos.
 
-Cada investigação é documentada de forma independente, com seu próprio relatório técnico, evidências e referências.
+**Resultado verificado:** identificação e validação de credenciais padrão de uma conta local, além da confirmação da exposição de comandos de autenticação FTP em texto claro.
 
-| Investigação | Vulnerabilidade | Status |
-|---|---|---|
-| [Backdoor do vsFTPd 2.3.4](vsftpd-234-backdoor/README.md) | CVE-2011-2523 · TCP/21 | Concluído |
+**Ferramentas:** `Nmap` · `Hydra` · `Medusa` · `Wireshark` · `Kali Linux`
 
-Novas investigações serão documentadas conforme forem realizadas e validadas.
+[Visualizar documentação completa](metasploitable-2/ftp/authentication-security/README.md)
 
-## 📑 Estrutura da Documentação
+#### 🛡️ vsFTPd 2.3.4 Backdoor
 
-Cada diretório de laboratório pode conter:
+<sub>Vulnerability Investigation · CVE-2011-2523 · TCP/21 · TCP/6200</sub>
 
-- **README.md:** relatório técnico, metodologia, descobertas, impacto e medidas de mitigação.
-- **evidence/:** capturas de tela e evidências técnicas de apoio.
-- **references/:** documentação oficial e fontes utilizadas na pesquisa.
+**Objetivo:** investigar, validar e explorar a backdoor associada a uma distribuição comprometida do vsFTPd 2.3.4.
 
-## ⚠️ Escopo e Autorização
+**Atividades realizadas:**
 
-Todos os testes são realizados contra a máquina virtual Metasploitable 2, intencionalmente vulnerável, em um ambiente isolado sob meu controle.
+- 🔎 Identificação e enumeração do serviço FTP utilizando Nmap.
+- 📚 Investigação do contexto técnico da CVE-2011-2523.
+- 🔬 Análise do código do script NSE de detecção.
+- ⚔️ Validação da vulnerabilidade utilizando Nmap NSE.
+- 🛠️ Exploração automatizada utilizando o Metasploit Framework.
+- 🔧 Reprodução manual da exploração utilizando FTP e Netcat.
+- 🔐 Confirmação de execução remota de comandos com privilégios de `root`.
+- 📑 Documentação das evidências, impacto e recomendações de mitigação.
 
-As técnicas documentadas destinam-se exclusivamente a fins educacionais e a atividades de testes de segurança devidamente autorizadas.
+**Resultado verificado:** duas abordagens de exploração foram utilizadas para obter acesso remoto ao sistema alvo com privilégios de `root`: exploração automatizada com Metasploit e acionamento manual da backdoor com conexão direta ao Bind Shell na TCP/6200.
+
+**Ferramentas:** `Nmap` · `Metasploit Framework` · `Netcat` · `Kali Linux`
+
+[Visualizar documentação completa](metasploitable-2/ftp/vsftpd-234-backdoor/README.md)
 
 ---
 
-<p align="center">
-  <sub>Metasploitable 2 · Ambiente de Treinamento em Cybersecurity</sub>
-</p>
