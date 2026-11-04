@@ -7,11 +7,11 @@
 </p>
 
 <p align="center">
-  <strong>Laboratórios práticos de Cybersecurity com foco em investigação de vulnerabilidades, segurança de redes, penetration testing e documentação técnica.</strong>
+  <strong>Laboratórios práticos de Cybersecurity com foco em investigação de vulnerabilidades, segurança de redes, análise de aplicações e penetration testing.</strong>
 </p>
 
 <p align="center">
-  🔎 Reconnaissance &nbsp; • &nbsp; 🌐 Network Security &nbsp; • &nbsp; ⚔️ Penetration Testing &nbsp; • &nbsp; 🛡️ Vulnerability Analysis
+  🔎 Reconnaissance &nbsp; • &nbsp; 🌐 Network Security &nbsp; • &nbsp; 🔐 Authentication Security &nbsp; • &nbsp; ⚔️ Penetration Testing &nbsp; • &nbsp; 🛡️ Vulnerability Analysis
 </p>
 
 ---
@@ -20,13 +20,21 @@
 
 O **Cybersecurity Training Labs** é um repositório dedicado à documentação de estudos, experimentos e investigações práticas na área de Cybersecurity.
 
-O projeto utiliza ambientes de laboratório controlados, incluindo sistemas intencionalmente vulneráveis, para investigar serviços de rede, analisar falhas de segurança, compreender técnicas de exploração e estudar mecanismos de proteção.
+Os laboratórios são realizados em ambientes controlados, utilizando sistemas e aplicações intencionalmente vulneráveis para investigar serviços de rede, analisar mecanismos de autenticação, compreender vulnerabilidades e estudar técnicas de exploração.
 
 O objetivo não é apenas executar ferramentas, mas compreender os procedimentos realizados, interpretar seus resultados e documentar as descobertas de maneira técnica e reproduzível.
 
-Cada investigação reúne procedimentos, comandos, evidências, análises, resultados e referências técnicas.
+Cada investigação busca reunir:
 
-Este repositório também funciona como um **portfólio técnico**, registrando o desenvolvimento dos estudos e as experiências práticas realizadas ao longo do aprendizado.
+- 🔎 Reconhecimento e identificação de superfícies de ataque.
+- 🔬 Análise técnica de serviços, aplicações e vulnerabilidades.
+- ⚔️ Testes controlados utilizando ferramentas de segurança.
+- 📡 Inspeção de tráfego e análise de requisições.
+- 📸 Evidências práticas dos procedimentos realizados.
+- 📊 Interpretação dos resultados e avaliação de impacto.
+- 🛡️ Recomendações de mitigação e segurança.
+
+Este repositório também funciona como um **portfólio técnico**, registrando a evolução dos conhecimentos e as experiências práticas desenvolvidas ao longo dos estudos.
 
 ## 🎯 Áreas de Estudo
 
@@ -38,18 +46,25 @@ O projeto contempla diferentes áreas da segurança da informação, com foco no
 | 🌐 Network Security | Estudo de protocolos, portas, serviços e tráfego de rede. |
 | 🧭 Service Enumeration | Identificação de serviços, detecção de versões e análise de configurações. |
 | 🔐 Authentication Security | Investigação de mecanismos de autenticação e auditoria controlada de credenciais. |
-| 🕸️ Web Application Security | Estudo de aplicações web e identificação de vulnerabilidades. |
+| 🕸️ Web Application Security | Análise de aplicações web e identificação de vulnerabilidades. |
 | 💥 Vulnerability Assessment | Pesquisa, validação e análise do impacto de vulnerabilidades. |
 | ⚔️ Penetration Testing | Execução de testes de segurança e exploração controlada. |
+| 📡 Traffic Analysis | Captura, inspeção e interpretação de comunicações de rede. |
 | 🛡️ Defensive Security | Análise de riscos, identificação de exposições e estratégias de mitigação. |
 
-O escopo inclui conhecimentos de segurança ofensiva e defensiva, buscando compreender tanto as técnicas de exploração quanto os métodos de identificação e correção de vulnerabilidades.
+## 🧪 Ambientes de Laboratório
 
-## 🧪 Laboratórios Concluídos
+Os estudos são organizados por ambiente, permitindo separar a configuração dos sistemas alvo e as investigações realizadas em cada um.
 
-As investigações abaixo foram realizadas no ambiente virtualizado **Metasploitable 2**, uma máquina Linux intencionalmente vulnerável utilizada para treinamento em segurança da informação.
+### 🖥️ Metasploitable 2
 
-### 1. 🔐 FTP Authentication Security
+<sub>Linux Security · Network Services · Vulnerability Assessment · Penetration Testing</sub>
+
+O Metasploitable 2 é uma máquina virtual Linux intencionalmente vulnerável, utilizada para investigar serviços de rede, analisar configurações inseguras e praticar técnicas de segurança ofensiva em ambiente controlado.
+
+**Investigações realizadas:**
+
+#### 1. 🔐 FTP Authentication Security
 
 <sub>Authentication Security · Credential Auditing · FTP · TCP/21</sub>
 
@@ -66,7 +81,7 @@ As investigações abaixo foram realizadas no ambiente virtualizado **Metasploit
 - 🔍 Identificação de credenciais e comandos transmitidos em texto claro.
 - 📂 Análise da navegação e do acesso aos diretórios do sistema de arquivos.
 
-**Resultado verificado:** identificação e validação de credenciais padrão de uma conta local, confirmação da exposição de informações de autenticação sem criptografia e acesso a diretórios do sistema de arquivos por meio do serviço FTP.
+**Resultado verificado:** identificação e validação de credenciais padrão de uma conta local, confirmação da exposição de informações de autenticação sem criptografia e acesso à estrutura de diretórios por meio do serviço FTP.
 
 **Ferramentas:** `Nmap` · `Hydra` · `Medusa` · `Wireshark` · `Cliente FTP` · `Kali Linux`
 
@@ -76,7 +91,7 @@ As investigações abaixo foram realizadas no ambiente virtualizado **Metasploit
 
 ---
 
-### 2. 🛡️ vsFTPd 2.3.4 Backdoor
+#### 2. 🛡️ vsFTPd 2.3.4 Backdoor
 
 <sub>Vulnerability Investigation · CVE-2011-2523 · TCP/21 · TCP/6200</sub>
 
@@ -93,7 +108,7 @@ As investigações abaixo foram realizadas no ambiente virtualizado **Metasploit
 - 🔐 Confirmação de execução remota de comandos com privilégios de `root`.
 - 📑 Documentação das evidências, impacto e recomendações de mitigação.
 
-**Resultado verificado:** a vulnerabilidade foi explorada por duas abordagens: utilização automatizada do Metasploit Framework e acionamento manual da backdoor com conexão direta ao Bind Shell disponibilizado na TCP/6200. Em ambas as abordagens, foi confirmado acesso remoto com privilégios de `root`.
+**Resultado verificado:** exploração realizada por duas abordagens: utilização do Metasploit Framework e acionamento manual da backdoor com conexão ao Bind Shell disponibilizado na TCP/6200. Em ambas as abordagens, foi confirmado acesso remoto com privilégios de `root`.
 
 **Ferramentas:** `Nmap` · `Metasploit Framework` · `Netcat` · `Cliente FTP` · `Kali Linux`
 
@@ -103,29 +118,71 @@ As investigações abaixo foram realizadas no ambiente virtualizado **Metasploit
 
 ---
 
+### 🕸️ DVWA — Damn Vulnerable Web Application
+
+<sub>Web Application Security · Authentication Security · Vulnerability Assessment</sub>
+
+O DVWA é uma aplicação web intencionalmente vulnerável, utilizada para estudar falhas comuns de segurança em aplicações web e compreender técnicas de identificação, validação e mitigação.
+
+A aplicação está hospedada localmente por meio de Docker e é utilizada para investigações práticas de segurança web.
+
+**Investigações realizadas:**
+
+#### 1. 🔐 Brute Force Authentication
+
+<sub>Web Authentication · Dictionary Attack · HTTP · Medusa</sub>
+
+**Objetivo:** investigar a resistência de um formulário web a tentativas automatizadas de autenticação.
+
+**Atividades realizadas:**
+
+- 🔎 Análise do formulário de autenticação e de seus parâmetros.
+- 🌐 Inspeção de requisições HTTP utilizando Firefox DevTools.
+- 🍪 Investigação do gerenciamento de sessões por meio de cookies.
+- 🔬 Análise do código-fonte PHP responsável pela autenticação.
+- ⚔️ Auditoria automatizada de credenciais utilizando Medusa.
+- 📊 Análise de respostas HTTP e identificação de condições de sucesso e falha.
+- ✅ Validação manual das credenciais identificadas.
+- 🛡️ Estudo de mecanismos de proteção contra brute force.
+
+**Resultado verificado:** identificação de credenciais válidas no nível de segurança Low e confirmação manual da autenticação por meio da resposta da aplicação.
+
+**Ferramentas:** `DVWA` · `Docker` · `Medusa` · `Firefox DevTools` · `Kali Linux`
+
+**Documentação técnica:**
+
+[📄 Visualizar DVWA Lab](dvwa/README.md)
+
+<sub>Próxima etapa: comparação do comportamento do formulário nos níveis de segurança Medium e Low.</sub>
+
+---
+
 ## 🧰 Ferramentas e Tecnologias
 
-Ferramentas utilizadas nos laboratórios e tecnologias que fazem parte do processo de aprendizado.
+Ferramentas utilizadas nas investigações e tecnologias que fazem parte do processo de aprendizado.
 
-### Ferramentas utilizadas nas investigações
+### 🔧 Ferramentas utilizadas
 
 | Ferramenta | Aplicação |
 |---|---|
 | 🔎 Nmap | Descoberta de hosts, varredura de portas, enumeração de serviços e detecção de vulnerabilidades. |
 | ⚔️ Metasploit Framework | Validação e exploração controlada de vulnerabilidades. |
 | 🔐 Hydra | Auditoria de mecanismos de autenticação utilizando ataques de dicionário. |
-| 🔐 Medusa | Testes automatizados de autenticação em serviços de rede. |
+| 🔐 Medusa | Testes automatizados de autenticação em serviços de rede e formulários web. |
 | 📡 Wireshark | Captura e análise de tráfego e protocolos de rede. |
 | 💻 Netcat | Estabelecimento de conexões TCP e interação com serviços de rede. |
+| 🐳 Docker | Criação e gerenciamento de ambientes de aplicações em containers. |
+| 🌐 Firefox DevTools | Inspeção de requisições HTTP, cabeçalhos, cookies e respostas. |
 | 🐧 Linux | Utilização e administração de sistemas e ambientes de segurança. |
 | 🖥️ Virtualização | Criação e gerenciamento de ambientes isolados de laboratório. |
 
-### Tecnologias em estudo
+### 📚 Tecnologias em estudo
 
 | Tecnologia | Aplicação |
 |---|---|
 | 🐍 Python | Automação, scripting e desenvolvimento de ferramentas auxiliares. |
 | 🌐 Burp Suite | Inspeção de tráfego HTTP e testes de segurança em aplicações web. |
+| 🗄️ SQL | Estudo de consultas, bancos de dados e vulnerabilidades relacionadas. |
 
 A presença de uma ferramenta ou tecnologia nesta seção não significa que ela tenha sido utilizada em todos os laboratórios ou que represente domínio completo sobre ela.
 
@@ -172,6 +229,7 @@ Os estudos atuais incluem:
 - Fundamentos de redes de computadores e protocolos de comunicação.
 - Linux e administração de sistemas.
 - Segurança de redes e serviços.
+- Segurança de aplicações web.
 - Análise de vulnerabilidades e técnicas de exploração.
 - Fundamentos de segurança ofensiva e defensiva.
 - Automação e scripting com Python.
@@ -184,6 +242,7 @@ Recursos utilizados como apoio aos estudos e pesquisas:
 
 - [OWASP Foundation](https://owasp.org/)
 - [OWASP Web Security Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
+- [OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/)
 - [Documentação oficial do Nmap](https://nmap.org/book/man.html)
 - [MITRE ATT&CK](https://attack.mitre.org/)
 - [MITRE CWE](https://cwe.mitre.org/)
@@ -208,9 +267,9 @@ As técnicas e ferramentas documentadas não devem ser utilizadas contra sistema
 ---
 
 <p align="center">
-  <strong>🔎 Investigar. ⚔️ Compreender. 🛡️ Proteger.</strong>
+  <strong>🔎 Investigar. 🔬 Compreender. ⚔️ Validar. 🛡️ Proteger.</strong>
 </p>
 
 <p align="center">
   <sub>Cybersecurity Training Labs · Portfólio de estudos e investigações práticas</sub>
-</p>
+</p>-
