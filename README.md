@@ -272,4 +272,4 @@ As técnicas e ferramentas documentadas não devem ser utilizadas contra sistema
 
 <p align="center">
   <sub>Cybersecurity Training Labs · Portfólio de estudos e investigações práticas</sub>
-</p>-
+</p>
