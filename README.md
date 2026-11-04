@@ -7,10 +7,14 @@
 </p>
 
 <p align="center">
-  **Portfólio de estudos e laboratórios práticos em Cybersecurity.**
+  <b>Portfólio de estudos e laboratórios práticos em Cybersecurity.</b>
 </p>
 
-🔎 Reconnaissance · 🌐 Network Security · 🔐 Authentication Security · 🕸️ Web Application Security · 🛡️ Vulnerability Analysis
+<p align="center">
+  🔎 Reconnaissance · 🌐 Network Security · 🔐 Authentication Security · 🕸️ Web Application Security · 🛡️ Vulnerability Analysis
+</p>
+
+> 🇺🇸 **English summary:** Personal portfolio of hands-on cybersecurity labs performed in isolated environments against intentionally vulnerable systems (Metasploitable 2 and DVWA). Each investigation is documented with procedures, evidence, security impact and references.
 
 ---
 
@@ -24,28 +28,11 @@ O objetivo é desenvolver conhecimentos técnicos por meio da prática, análise
 
 ## 🧪 Laboratórios
 
-### 🖥️ Metasploitable 2
-
-Ambiente Linux intencionalmente vulnerável utilizado para estudos de segurança de redes e serviços.
-
-**Investigações:**
-- FTP Authentication Security
-- vsFTPd 2.3.4 Backdoor — CVE-2011-2523
-
-📂 [Acessar laboratórios do Metasploitable 2](metasploitable-2/README.md)
-
----
-
-### 🕸️ DVWA — Damn Vulnerable Web Application
-
-Aplicação web intencionalmente vulnerável utilizada para estudos de segurança de aplicações.
-
-**Investigações:**
-- Brute Force Authentication
-
-📂 [Acessar laboratórios do DVWA](dvwa/README.md)
-
----
+| Ambiente | Investigação | Foco | Documentação |
+|---|---|---|---|
+| 🖥️ Metasploitable 2 | vsFTPd 2.3.4 Backdoor (CVE-2011-2523) | Enumeração, validação e análise de impacto | [Ver laboratório](metasploitable-2/ftp/vsftpd-234-backdoor/README.md) |
+| 🖥️ Metasploitable 2 | FTP Authentication Security | Auditoria de autenticação | [Ver laboratório](metasploitable-2/ftp/authentication-security/README.md) |
+| 🕸️ DVWA | Brute Force Authentication | Segurança de autenticação em aplicações web | [Ver laboratório](dvwa/brute-force/README.md) |
 
 ## 🧰 Ferramentas
 
@@ -85,5 +72,5 @@ As técnicas documentadas destinam-se exclusivamente a fins educacionais e não 
 ---
 
 <p align="center">
-  **🔎 Investigar · 🔬 Compreender · ⚔️ Validar · 🛡️ Proteger**
+  <b>🔎 Investigar · 🔬 Compreender · ⚔️ Validar · 🛡️ Proteger</b>
 </p>
